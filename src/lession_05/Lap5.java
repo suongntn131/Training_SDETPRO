@@ -27,7 +27,8 @@ public class Lap5 {
 
             switch (optionInput){
                 case 0:
-
+                    System.out.print("Goodbye!");
+                    isContinuing = false;
                     break;
                 case 1:
                     boolean isDuplicate = false;
