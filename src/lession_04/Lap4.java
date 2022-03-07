@@ -1,6 +1,5 @@
 package lession_04;
 
-import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,16 +29,16 @@ public class Lap4 {
 
             Scanner scanner = new Scanner(System.in);
             System.out.print("Please select option number: ");
-            int numberInput = scanner.nextInt();
-            switch (numberInput){
+            int optionInput = scanner.nextInt();
+            switch (optionInput){
                 case 0:
                     System.out.print("Goodbye!");
                     isContinuing = false;
                     break;
                 case 1:
                     System.out.print("Please enter a number you want to add to the list: ");
-                    numberInput = scanner.nextInt();
-                    arrList.add(numberInput);
+                    optionInput = scanner.nextInt();
+                    arrList.add(optionInput);
                     break;
                 case 2:
                     if (arrList.size() > 0){
@@ -81,16 +80,16 @@ public class Lap4 {
                 case 5:
                     if (arrList.size() > 0){
                         System.out.print("Enter the number you want to find: ");
-                        numberInput = scanner.nextInt();
-                        List<Integer> indexArr= new ArrayList<>();
+                        optionInput = scanner.nextInt();
+                        List<Integer> indexList= new ArrayList<>();
                         for (int i = 0; i < arrList.size(); i++) {
-                            if (arrList.get(i) == numberInput){
-                                indexArr.add(i);
+                            if (arrList.get(i) == optionInput){
+                                indexList.add(i);
                             }
                         }
-                        if (indexArr.size() > 0) {
-                            System.out.print("Number " + numberInput + " at index ");
-                            for (Integer value : indexArr) {
+                        if (indexList.size() > 0) {
+                            System.out.print("Number " + optionInput + " at index ");
+                            for (Integer value : indexList) {
                                 System.out.print(value + ", ");
                             }
                         }else {
