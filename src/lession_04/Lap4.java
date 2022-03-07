@@ -82,17 +82,18 @@ public class Lap4 {
                     if (arrList.size() > 0){
                         System.out.print("Enter the number you want to find: ");
                         numberInput = scanner.nextInt();
-                        boolean isFound = false;
-                        int arrIndex = 0;
-                        while (!isFound && arrIndex < arrList.size()){
-                            if (arrList.get(arrIndex) == numberInput){
-                                isFound = true;
-                                System.out.println("Number " + numberInput + " at index = " + arrIndex);
-                            }else {
-                                ++arrIndex;
+                        List<Integer> indexArr= new ArrayList<>();
+                        for (int i = 0; i < arrList.size(); i++) {
+                            if (arrList.get(i) == numberInput){
+                                indexArr.add(i);
                             }
                         }
-                        if (!isFound){
+                        if (indexArr.size() > 0) {
+                            System.out.print("Number " + numberInput + " at index ");
+                            for (Integer value : indexArr) {
+                                System.out.print(value + ", ");
+                            }
+                        }else {
                             System.out.println("This number is not found in the list ");
                         }
                     }else{
