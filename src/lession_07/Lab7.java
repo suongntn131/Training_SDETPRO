@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Lap7 {
+public class Lab7 {
     public static void main(String[] args) {
         /**\
          * Create a simple menu
